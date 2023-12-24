@@ -12,3 +12,59 @@
 
 Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
 */
+@keyframes triangle-mark {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-4px);
+  }
+}
+
+@keyframes to-scale {
+  from {
+    transform: scale(1);
+    transform-origin: center;
+  }
+  to {
+    transform: scale(1.5);
+    transform-origin: center;
+  }
+}
+
+@keyframes sparks {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes contour {
+  from {
+    fill: var(--red-color);
+  }
+  to {
+    fill: var(--red-color);
+  }
+}
+
+@keyframes main-body {
+  from {
+    fill: var(--black-color);
+  }
+  to {
+    fill: var(--red-color);
+  }
+}
+
+@keyframes core {
+  from {
+    fill: var(--black-color);
+  }
+  to {
+    fill: var(--red-color);
+  }
+}

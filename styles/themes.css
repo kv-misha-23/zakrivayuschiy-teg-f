@@ -4,3 +4,49 @@
 ✦ theme-light — класс светлой темы
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
+
+:root.theme-light {
+  --fint-weight-Inter-title: "wght" 700;
+  --fint-weight-Inter-text: "wght" 400;
+  --accent-color: var(--black-color);
+  --background-color: var(--white-color);
+  --background-gradient: var(--background-gradient-black);
+  --button-text: var(--white-color);
+  --heart-hover: var(--black-color);
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Дублируем переменные светлой темы */
+    --fint-weight-Inter-title: "wght" 700;
+    --fint-weight-Inter-text: "wght" 400;
+    --accent-color: var(--black-color);
+    --background-color: var(--white-color);
+    --background-gradient: var(--background-gradient-black);
+    --button-text: var(--white-color);
+    --heart-hover: var(--black-color);
+  }
+}
+
+:root.theme-dark {
+  --fint-weight-Inter-title: "wght" 785;
+  --fint-weight-Inter-text: "wght" 465;
+  --accent-color: var(--green-color);
+  --background-color: var(--black-color);
+  --background-gradient: var(--background-gradient-green);
+  --button-text: var(--green-color);
+  --heart-hover: var(--green-color);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    /* Дублируем переменные для тёмной темы */
+    --fint-weight-Inter-title: "wght" 785;
+    --fint-weight-Inter-text: "wght" 465;
+    --accent-color: var(--green-color);
+    --background-color: var(--black-color);
+    --background-gradient: var(--background-gradient-green);
+    --button-text: var(--green-color);
+    --heart-hover: var(--green-color);
+  }
+}

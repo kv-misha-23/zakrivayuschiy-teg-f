@@ -1,1 +1,62 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+
+:root {
+  --font-femily-Inter: "Inter-Variable";
+  --font-femily-2p: "PressStart2P";
+
+  --white-color: #fff;
+  --black-color: #000;
+  --black-color-2: #1a1a1a;
+  --black-transparent: rgba(0, 0, 0, 0);
+  --green-color: #00cc14;
+  --green-color-2: #007f0c;
+  --green-color-3: #004306;
+  --red-color: #ff0000;
+  --gray-color: #d3d3d3;
+  --gray-color-2: #e7e7e7;
+
+  --three-ease-seconds: 0.3s ease;
+
+  --background-gradient-black: repeating-linear-gradient(
+      to right,
+      var(--black-transparent) 0,
+      var(--gray-color) 1px,
+      var(--gray-color) 2px,
+      var(--black-transparent) 3px,
+      var(--black-transparent) 4px
+    ),
+    repeating-linear-gradient(
+      to top,
+      var(--black-transparent) 0,
+      var(--gray-color-2) 1px,
+      var(--black-color-2),
+      2px,
+      var(--black-transparent) 3px,
+      var(--black-transparent) 4px
+    ),
+    linear-gradient(to top, var(--black-color), var(--black-transparent));
+
+  --background-gradient-green: repeating-linear-gradient(
+      to right,
+      var(--black-transparent) 0,
+      var(--black-color) 1px,
+      var(--black-color) 2px,
+      var(--black-transparent) 3px,
+      var(--black-transparent) 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      var(--black-transparent) 0,
+      var(--black-color) 1px,
+      var(--black-color) 2px,
+      var(--black-transparent) 3px,
+      var(--black-transparent) 4px
+    ),
+    linear-gradient(to bottom, var(--green-color-2), var(--green-color-3));
+
+  --text-shadow: 1px 0 0 var(--background-color),
+    1px 0 0 var(--background-color), 0 1px 0 var(--background-color),
+    0 1px 0 var(--background-color), -1px 0 0 var(--background-color),
+    -1px 0 0 var(--background-color), 0 -1px 0 var(--background-color),
+    0 -1px 0 var(--background-color);
+}
