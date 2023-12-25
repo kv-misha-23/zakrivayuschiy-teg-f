@@ -44,7 +44,7 @@
 
 @keyframes contour {
   from {
-    fill: var(--red-color);
+    fill: var(--accent-color);
   }
   to {
     fill: var(--red-color);
@@ -53,7 +53,7 @@
 
 @keyframes main-body {
   from {
-    fill: var(--black-color);
+    fill: var(--accent-color);
   }
   to {
     fill: var(--red-color);
@@ -62,9 +62,65 @@
 
 @keyframes core {
   from {
-    fill: var(--black-color);
+    fill: var(--accent-color);
   }
   to {
     fill: var(--red-color);
   }
+}
+
+.contour {
+  transition: fill 0.1s linear;
+  fill: var(--accent-color);
+}
+
+.main-body {
+  transition: fill 0.3s linear;
+}
+
+.core {
+  transition: fill 0.3s 0.03s linear;
+}
+
+.like-icon:hover .core {
+  fill: var(--heart-hover);
+}
+
+.like-icon:hover .main-body {
+  fill: var(--heart-hover);
+}
+
+.like-icon:active .core {
+  fill: var(--red-color);
+}
+
+.like-icon:active .main-body {
+  fill: var(--red-color);
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.is-liked .heart {
+  animation: to-scale 0.3s 0.1s ease-in alternate;
+}
+
+.is-liked .contour {
+  animation: contour 0.3s linear 0.06s;
+  animation-fill-mode: forwards;
+}
+
+.is-liked .main-body {
+  animation: main-body 0.3s linear 0.05s;
+  animation-fill-mode: forwards;
+}
+
+.is-liked .core {
+  animation: core 0.3s linear;
+  animation-fill-mode: forwards;
+}
+
+.is-liked .sparks {
+  animation: sparks 0.3s 0.3s ease-in alternate;
 }

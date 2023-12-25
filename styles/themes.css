@@ -6,8 +6,8 @@
 */
 
 :root.theme-light {
-  --fint-weight-Inter-title: "wght" 700;
-  --fint-weight-Inter-text: "wght" 400;
+  --fint-weight-main-title: "wght" 700;
+  --fint-weight-main-text: "wght" 400;
   --accent-color: var(--black-color);
   --background-color: var(--white-color);
   --background-gradient: var(--background-gradient-black);
@@ -18,8 +18,8 @@
 @media (prefers-color-scheme: light) {
   :root {
     /* Дублируем переменные светлой темы */
-    --fint-weight-Inter-title: "wght" 700;
-    --fint-weight-Inter-text: "wght" 400;
+    --fint-weight-main-title: "wght" 700;
+    --fint-weight-main-text: "wght" 400;
     --accent-color: var(--black-color);
     --background-color: var(--white-color);
     --background-gradient: var(--background-gradient-black);
@@ -29,8 +29,8 @@
 }
 
 :root.theme-dark {
-  --fint-weight-Inter-title: "wght" 785;
-  --fint-weight-Inter-text: "wght" 465;
+  --fint-weight-main-title: "wght" 785;
+  --fint-weight-main-text: "wght" 465;
   --accent-color: var(--green-color);
   --background-color: var(--black-color);
   --background-gradient: var(--background-gradient-green);
@@ -41,8 +41,8 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* Дублируем переменные для тёмной темы */
-    --fint-weight-Inter-title: "wght" 785;
-    --fint-weight-Inter-text: "wght" 465;
+    --fint-weight-main-title: "wght" 785;
+    --fint-weight-main-text: "wght" 465;
     --accent-color: var(--green-color);
     --background-color: var(--black-color);
     --background-gradient: var(--background-gradient-green);

@@ -1,35 +1,35 @@
 /* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
 
 :root {
-  --font-femily-Inter: "Inter-Variable";
-  --font-femily-2p: "PressStart2P";
+  --main-font-femily: "Inter-Variable";
+  --accent-font-femily: "PressStart2P";
 
   --white-color: #fff;
   --black-color: #000;
-  --black-color-2: #1a1a1a;
+  --black-color-gradient: #1a1a1a;
   --black-transparent: rgba(0, 0, 0, 0);
   --green-color: #00cc14;
-  --green-color-2: #007f0c;
-  --green-color-3: #004306;
+  --green-color-gradient: #007f0c;
+  --dark-green-color-gradient: #004306;
   --red-color: #ff0000;
-  --gray-color: #d3d3d3;
-  --gray-color-2: #e7e7e7;
+  --gray-color-gradient: #d3d3d3;
+  --top-line-gray-color-gradient: #e7e7e7;
 
   --three-ease-seconds: 0.3s ease;
 
   --background-gradient-black: repeating-linear-gradient(
       to right,
       var(--black-transparent) 0,
-      var(--gray-color) 1px,
-      var(--gray-color) 2px,
+      var(--gray-color-gradient) 1px,
+      var(--gray-color-gradient) 2px,
       var(--black-transparent) 3px,
       var(--black-transparent) 4px
     ),
     repeating-linear-gradient(
       to top,
       var(--black-transparent) 0,
-      var(--gray-color-2) 1px,
-      var(--black-color-2),
+      var(--top-line-gray-color-gradient) 1px,
+      var(--black-color-gradient),
       2px,
       var(--black-transparent) 3px,
       var(--black-transparent) 4px
@@ -52,7 +52,7 @@
       var(--black-transparent) 3px,
       var(--black-transparent) 4px
     ),
-    linear-gradient(to bottom, var(--green-color-2), var(--green-color-3));
+    linear-gradient(to bottom, var(--green-color-gradient), var(--dark-green-color-gradient));
 
   --text-shadow: 1px 0 0 var(--background-color),
     1px 0 0 var(--background-color), 0 1px 0 var(--background-color),
