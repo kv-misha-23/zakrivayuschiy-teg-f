@@ -21,9 +21,9 @@
   font-family: var(--main-font-femily), sans-serif;
   font-variation-settings: var(--fint-weight-main-text);
   color: var(--accent-color);
-  padding: 106px 0;
-  background-attachment: fixed;
+  padding: 102px 0 105px 0;
   background-image: var(--background-gradient);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -51,6 +51,7 @@
   display: block;
   margin-bottom: 20px;
   text-decoration: none;
+  outline: none;
 }
 
 .header__title {
@@ -64,7 +65,7 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  margin: 0 0 23px 16px;
+  margin: 0 0 21px 16px;
 }
 
 .theme-menu__button {
@@ -106,15 +107,19 @@
   block-size: 3px;
   content: "";
   display: block;
+  position: absolute;
+  bottom: 1px;
+  left: 0;
   inline-size: 100%;
   inset-block-end: -3px;
   inset-inline-start: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
   transform: scaleX(0);
   transform-origin: left;
   transition: var(--three-ease-seconds);
+}
+
+.theme-menu__button:focus-visible {
+  opacity: 0.6;
 }
 
 .theme-menu__button:focus-visible::after {
@@ -144,9 +149,10 @@
 
 .card__image-wrapper {
   position: relative;
+  top: 0;
+  left: 0;
   border-top: 2px solid var(--accent-color);
   border-bottom: 2px solid var(--accent-color);
-  display: block;
 }
 
 .card__image-mark {
@@ -174,6 +180,7 @@
 }
 
 .card__image {
+  display: block;
   inline-size: 100%;
   object-fit: cover;
 }
@@ -222,6 +229,7 @@
 .card__button {
   display: flex;
   justify-content: end;
+  gap: 5px;
 }
 
 .button__heart {
@@ -270,38 +278,41 @@
 
 .button__common:focus-visible {
   box-shadow: 2px 2px var(--accent-color);
+  outline-offset: -2px;
 }
 
 .card__icon-button {
+  display: flex;
+  align-items: center;
+  max-block-size: 40px;
+  padding: 0;
   cursor: pointer;
-  border: none;
+  border:2px solid transparent;
   background: transparent;
   outline: none;
   transition: var(--three-ease-seconds);
 }
 
 .card__icon-button:focus-visible {
-  outline: 2px solid var(--accent-color);
-}
-
-.like-icon {
-  align-self: center;
+  border: 2px solid var(--accent-color);
 }
 
 .card__like-button {
-  inline-size: 130px;
+  display: block;
+  min-inline-size: 130px;
+  max-block-size: 40px;
   padding: 9px 17px;
 }
 
-.section-save {
+.section__save {
   display: flex;
   justify-content: center;
   background-color: var(--background-clr);
-  margin: 50px auto 0;
 }
 
 .floppy-icon {
-  max-width: 21px;
+  color: var(--button-text);
+  mix-blend-mode: difference;
 }
 
 .card__save-button {
@@ -310,12 +321,6 @@
   justify-content: center;
   align-items: center;
   gap: 8px;
-}
-
-.section-dialog{
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .dialog {
@@ -327,7 +332,7 @@
   font-weight: 400;
   inset: 0;
   line-height: 150%;
-  max-inline-size: 353px;
+  max-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
   padding: 30px;
   position: fixed;
   text-transform: uppercase;
@@ -365,4 +370,11 @@
 .dialog__save-button {
   padding: 9px 20px;
   width: 100%;
+  text-transform: uppercase;
+}
+
+@media (width <= 375px) {
+  .card__save-button {
+    flex-direction: column;
+  }
 }
