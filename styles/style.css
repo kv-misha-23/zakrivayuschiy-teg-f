@@ -311,8 +311,12 @@
 }
 
 .floppy-icon {
+  position: relative;
+  top: 0;
+  left: 0;
   color: var(--button-text);
   mix-blend-mode: difference;
+  z-index: 1;
 }
 
 .card__save-button {
