@@ -311,6 +311,7 @@
 }
 
 .floppy-icon {
+  block-size: 21px;
   position: relative;
   top: 0;
   left: 0;
@@ -336,7 +337,7 @@
   font-weight: 400;
   inset: 0;
   line-height: 150%;
-  max-inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem);
+  max-inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);
   padding: 30px;
   position: fixed;
   text-transform: uppercase;
@@ -380,5 +381,9 @@
 @media (width <= 375px) {
   .card__save-button {
     flex-direction: column;
+  }
+
+  .floppy-icon {
+    block-size: 28px;
   }
 }
